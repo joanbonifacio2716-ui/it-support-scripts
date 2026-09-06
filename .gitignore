@@ -1,9 +1,22 @@
 # Logs
 *.log
+
 # Temporary files
 *.tmp
+
 # Credentials / secrets
 *.cred
 *.key
-# PowerShell
-*.ps1
+*.secret
+*.env
+
+# PowerShell generated files
+*.psd1
+*.pdb
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# VS Code
+.vscode/
