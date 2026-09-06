@@ -2,9 +2,13 @@
 .SYNOPSIS
     Displays detailed network configuration.
 
+.DESCRIPTION
+    Retrieves network adapter, IP address, gateway,
+    and DNS configuration for troubleshooting.
+
 .NOTES
     Author: Joan Bonifacio
-    Purpose: IT Service Desk troubleshooting
+    Purpose: IT Service Desk network troubleshooting
 #>
 
 Write-Host "========================================="
