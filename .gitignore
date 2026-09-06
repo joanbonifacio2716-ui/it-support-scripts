@@ -1,9 +1,9 @@
 # Logs
 *.log
-
 # Temporary files
 *.tmp
-
 # Credentials / secrets
 *.cred
 *.key
+# PowerShell
+*.ps1
