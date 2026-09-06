@@ -4,7 +4,7 @@
 
 .DESCRIPTION
     Removes temporary files from the current user's
-    Temp directory.
+    Temp directory that are no longer in use.
 
 .NOTES
     Author: Joan Bonifacio
