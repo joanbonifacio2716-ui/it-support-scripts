@@ -3,6 +3,7 @@
 
 # Temporary files
 *.tmp
+*.temp
 
 # Credentials / secrets
 *.cred
@@ -18,5 +19,8 @@
 Thumbs.db
 Desktop.ini
 
-# VS Code
+# Visual Studio Code
 .vscode/
+
+# PowerShell history
+ConsoleHost_history.txt
