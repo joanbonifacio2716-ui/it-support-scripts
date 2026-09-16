@@ -4,11 +4,24 @@
 
 .DESCRIPTION
     Retrieves useful workstation information commonly needed
-    during IT Service Desk troubleshooting.
+    during initial IT Service Desk troubleshooting.
+
+    The script collects computer name, operating system,
+    manufacturer and model, processor, installed RAM,
+    and basic IP configuration.
+
+.EXAMPLE
+    .\Get-SystemInfo.ps1
+
+    Collects basic Windows, hardware, and network information
+    from the local workstation.
 
 .NOTES
     Author: Joan Bonifacio
-    Purpose: IT Service Desk / Help Desk troubleshooting
+    Project: Windows Endpoint Troubleshooting Toolkit
+    Purpose: Initial endpoint diagnostics for IT Service Desk support
+
+    This is a personal learning and portfolio project.
 #>
 
 Write-Host "========================================="
