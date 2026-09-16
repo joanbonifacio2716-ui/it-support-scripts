@@ -1,3 +1,4 @@
+```powershell
 <#
 .SYNOPSIS
     Retrieves basic Active Directory user information.
@@ -127,3 +128,4 @@ else {
 Write-Host "`n========================================="
 Write-Host "Active Directory Query Complete."
 Write-Host "========================================="
+```
