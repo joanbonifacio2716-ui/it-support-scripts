@@ -1,3 +1,4 @@
+````markdown
 # Windows Endpoint Troubleshooting Toolkit
 
 A personal IT Support portfolio project containing PowerShell practice scripts for common Windows endpoint diagnostic and troubleshooting tasks.
@@ -12,25 +13,25 @@ The project is designed around realistic Service Desk scenarios rather than prod
 
 ## Objectives
 
-* Practice structured Windows troubleshooting
-* Build reusable diagnostic scripts
-* Improve PowerShell fundamentals
-* Organize common endpoint troubleshooting checks
-* Document troubleshooting logic
-* Demonstrate practical IT Support skills through GitHub
+- Practice structured Windows troubleshooting
+- Build reusable diagnostic scripts
+- Improve PowerShell fundamentals
+- Organize common endpoint troubleshooting checks
+- Document troubleshooting logic
+- Demonstrate practical IT Support skills through GitHub
 
 ## Environment
 
-* Windows 10 / Windows 11
-* PowerShell
-* Windows command-line utilities
-* GitHub
+- Windows 10 / Windows 11
+- PowerShell
+- Windows networking utilities
+- GitHub
 
 ---
 
-# Scripts
+# Completed Scripts
 
-## Get-SystemInfo.ps1
+## 1. Get-SystemInfo.ps1
 
 ### Purpose
 
@@ -40,14 +41,14 @@ The project is designed around realistic Service Desk scenarios rather than prod
 
 The script retrieves:
 
-* Computer name
-* Windows operating system and version
-* System architecture
-* Manufacturer and device model
-* Processor information
-* Installed physical RAM
-* Active IPv4 network configuration
-* Default gateway
+- Computer name
+- Windows operating system and version
+- System architecture
+- Manufacturer and device model
+- Processor information
+- Installed physical RAM
+- Active IPv4 network configuration
+- Default gateway
 
 ### Troubleshooting Scenario
 
@@ -61,12 +62,12 @@ This information can help establish the starting point for further troubleshooti
 
 The script was tested on a personal Windows workstation.
 
-**Operating System:** Windows 10 Pro
-**Architecture:** 64-bit
-**Manufacturer:** Acer
-**Model:** Veriton M200-B350
-**Processor:** AMD Ryzen 7 1700X Eight-Core Processor
-**Installed RAM:** 15.94 GB
+**Operating System:** Windows 10 Pro  
+**Architecture:** 64-bit  
+**Manufacturer:** Acer  
+**Model:** Veriton M200-B350  
+**Processor:** AMD Ryzen 7 1700X Eight-Core Processor  
+**Installed RAM:** 15.94 GB  
 **Network Interface:** Ethernet
 
 ### Example Output
@@ -110,7 +111,7 @@ Gateway:      [Default gateway removed]
 =========================================
 System Information Collection Complete.
 =========================================
-```
+````
 
 ### Skills Demonstrated
 
@@ -141,123 +142,60 @@ Future improvements may include:
 
 ---
 
-## Get-IPConfiguration.ps1
+# 2. Get-IPConfiguration.ps1
 
-**Purpose:**
-Retrieve the computer's current network configuration.
+### Purpose
 
-**Example use case:**
+`Get-IPConfiguration.ps1` is a PowerShell practice script designed to review the active IPv4 network configuration of a Windows workstation.
 
-A user reports that they cannot access an internal application or website. Reviewing the endpoint's IP configuration can help determine whether the device has a valid network configuration.
+The script helps collect basic network information that can be useful during initial IT Service Desk troubleshooting.
 
-**Skills demonstrated:**
+### Information Collected
 
-* Basic networking
-* IP configuration
-* Windows troubleshooting
-* PowerShell fundamentals
+The script retrieves:
 
-**Status:** Planned / In Progress
+* Network interface name
+* Network adapter description
+* IPv4 address
+* Default gateway
+* DNS server information
 
----
+The script filters the results to focus on network interfaces with both an IPv4 address and a default gateway.
 
-## Test-NetworkConnectivity.ps1
+### Troubleshooting Scenario
 
-**Purpose:**
-Perform basic connectivity checks to help identify network communication issues.
+A user reports that they cannot access a website, internal application, or network resource.
 
-**Example use case:**
+Before moving to more advanced troubleshooting, a Service Desk technician can review the endpoint's network configuration to determine whether the workstation has an active IPv4 configuration and a default gateway.
 
-A user reports intermittent connectivity or difficulty reaching a service. The script can be used as an initial diagnostic step before escalating the issue.
+This provides a useful starting point for troubleshooting connectivity-related incidents.
 
-**Skills demonstrated:**
+### Example Test Environment
 
-* Network troubleshooting
-* Connectivity testing
-* Troubleshooting methodology
-* PowerShell fundamentals
+The script was tested on a personal Windows workstation.
 
-**Status:** Planned / In Progress
+**Operating System:** Windows 10 Pro
+**Network Connection:** Ethernet
+**Network Adapter:** Realtek PCIe GbE Family Controller
 
----
+### Example Output
 
-## Clear-TempFiles.ps1
+The following example is based on an actual test run. Private network addressing information has been removed.
 
-**Purpose:**
-Practice basic Windows endpoint maintenance by identifying and clearing temporary files.
+```text
+=========================================
+         IP CONFIGURATION
+=========================================
 
-**Example use case:**
+[Network Adapter]
+-----------------------------------------
+Interface:    Ethernet
+Description:  Realtek PCIe GbE Family Controller
+IPv4 Address: [Private IP address removed]
+Gateway:      [Default gateway removed]
+DNS Server(s): [DNS server removed]
 
-A workstation has limited available storage or temporary files are contributing to an endpoint maintenance issue.
-
-**Skills demonstrated:**
-
-* Windows maintenance
-* File-system operations
-* PowerShell fundamentals
-* Endpoint support
-
-**Status:** Planned / In Progress
-
----
-
-# Troubleshooting Approach
-
-My general troubleshooting approach is:
-
-1. Understand the user's reported issue.
-2. Identify the affected device or service.
-3. Gather relevant system information.
-4. Check basic connectivity and configuration.
-5. Isolate the possible cause.
-6. Apply an appropriate troubleshooting step.
-7. Validate whether the issue has been resolved.
-8. Document the findings and next action.
-
-This approach reflects the structured troubleshooting process used in IT Service Desk environments.
-
----
-
-# What I Am Practicing
-
-This project is part of my ongoing development in:
-
-* Windows troubleshooting
-* PowerShell
-* Basic networking
-* IT Service Desk diagnostics
-* Technical documentation
-* Troubleshooting methodology
-
----
-
-# Limitations
-
-These scripts are personal learning and portfolio projects.
-
-They are not intended to replace enterprise IT policies, security controls, change-management procedures, or approved production automation.
-
-Testing is performed in a personal Windows environment unless otherwise stated.
-
----
-
-# Future Improvements
-
-Planned improvements include:
-
-* Additional network diagnostic scripts
-* More structured error handling
-* Logging troubleshooting results
-* Input validation
-* Active Directory practice scripts
-* Microsoft 365 support-related utilities
-* More detailed example outputs
-* Additional troubleshooting scenarios
-
----
-
-# Repository
-
-Main repository:
-
-https://github.com/joanbonifacio2716-ui/it-support-scripts
+=========================================
+Network Configuration Check Complete.
+===========================
+```
