@@ -1,3 +1,4 @@
+```powershell
 <#
 .SYNOPSIS
     Displays basic network configuration.
@@ -28,6 +29,8 @@ Write-Host "         IP CONFIGURATION"
 Write-Host "========================================="
 
 # Retrieve network configuration
+# Only include adapters with both an IPv4 address
+# and a default gateway.
 $networkConfig = Get-NetIPConfiguration |
     Where-Object {
         $_.IPv4Address -and
@@ -79,3 +82,4 @@ else {
 Write-Host "`n========================================="
 Write-Host "Network Configuration Check Complete."
 Write-Host "========================================="
+```
