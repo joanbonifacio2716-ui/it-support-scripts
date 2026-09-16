@@ -30,7 +30,8 @@ Write-Host "========================================="
 # Retrieve network configuration
 $networkConfig = Get-NetIPConfiguration |
     Where-Object {
-        $_.IPv4Address
+        $_.IPv4Address -and
+        $_.IPv4DefaultGateway
     }
 
 if ($networkConfig) {
