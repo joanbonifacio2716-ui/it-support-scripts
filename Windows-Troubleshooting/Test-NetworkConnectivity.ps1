@@ -1,4 +1,3 @@
-```powershell
 <#
 .SYNOPSIS
     Performs basic network connectivity tests.
@@ -115,4 +114,3 @@ else {
 Write-Host "`n========================================="
 Write-Host "Network Connectivity Test Complete."
 Write-Host "========================================="
-```
